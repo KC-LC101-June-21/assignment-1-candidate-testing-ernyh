@@ -16,11 +16,12 @@ let correctAnswers = [
   "3" 
   ];
 let candidateAnswers = [
-  "Blank",
-  "Blank",
-  "Blank",
-  "Blank",
-  "Blank"];
+  "",
+  "",
+  "",
+  "",
+  ""
+  ];
 
 function askForName() {
 candidateName = input.question("Enter candidate name: ");
