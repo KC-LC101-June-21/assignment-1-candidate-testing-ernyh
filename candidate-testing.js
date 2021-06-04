@@ -24,37 +24,51 @@ let candidateAnswers = [
 
 function askForName() {
 candidateName = input.question("Enter candidate name: ");
+console.log();
 }
 
 function askQuestion() {
   let i = 0;
   for (i = 0; i < 5; i++ ){
   candidateAnswers[i] = input.question(questions[i]);
+  console.log();
 }
 }
 
 
 function gradeQuiz() {
 let grade = 0;
+let correct = 0;
+let status;
 let i = 0;
+
 for(i= 0; i < 5; i++){
 console.log(`${i+1}) ${questions[i]}
 Your Answer: ${candidateAnswers[i]}
 Correct Answer: ${correctAnswers[i]}
 `);
-if(candidateAnswers[i] === correctAnswers){
-  //FIXME
+if(candidateAnswers[i] === correctAnswers[i]){
+  correct++;
 }
 }
+grade = correct *100 / 5;
+if(grade >= 80){
+status = "PASSED";
+}
+else{
+  status = "FAILED";
+}
 
-//FIXME grade *100 / 5; teturn grade
+console.log(`>>> Overall Grade: ${grade}% (${correct} of 5 responses correct) <<<
+>>> Status: ${status} <<<`);
 
+return grade;
 }
 
 function runProgram() {
 
   askForName();
-  console.log("Greetings " + candidateName + "." );
+  console.log("Greetings " + candidateName + ".\n" );
   askQuestion();
 
   //FIXME
