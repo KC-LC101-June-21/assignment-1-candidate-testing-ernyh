@@ -52,20 +52,13 @@ if(candidateAnswers[i] === correctAnswers){
 }
 
 function runProgram() {
-  let grade;
 
   askForName();
   console.log("Greetings " + candidateName + "." );
   askQuestion();
 
   //FIXME
-  grade = gradeQuiz();
-
-//FIXME
-console.log(`>>> Overall Grade: ${gradePercent}% (${grade} of 5 responses correct) <<<
->>> Status: FAILED <<<`);
-
-  
+  gradeQuiz();
 }
 
 // Don't write any code below this line //
