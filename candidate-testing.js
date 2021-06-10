@@ -1,11 +1,12 @@
 const input = require('readline-sync');
 
-let candidateName = "";
+
+//useless variables
   let correctAnswer = "Sally Ride";
   let question =   "Who was the first American woman in space? ";
   let candidateAnswer = "Sally Ride";
 
-
+let candidateName = "";
 let questions = [
   "Who was the first American woman in space? ",
   "True or false: 5 kilometer == 5000 meters? ",
@@ -29,7 +30,7 @@ console.log();
 
 function askQuestion() {
   let i = 0;
-  for (i = 0; i < candidateAnswers.length; i++ ){
+  for (i = 0; i < questions.length; i++ ){
   candidateAnswers[i] = input.question(questions[i]);
   console.log();
 }
@@ -51,7 +52,8 @@ if(String(candidateAnswers[i]).toLowerCase() === String(correctAnswers[i]).toLow
 }
 }
 grade = correct *100 / 5;
-if(grade >= 80){
+if(grade >= 80)
+{
 status = "PASSED";
 }
 else{
