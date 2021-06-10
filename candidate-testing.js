@@ -8,6 +8,7 @@ let questions = [
   "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ", 
   "What is the minimum crew size for the ISS? "
   ];
+  let correctAnswer = "Sally Ride";
 let correctAnswers = [
   "Sally Ride", 
   "true" , 
@@ -72,7 +73,7 @@ function runProgram() {
 module.exports = {
   candidateName: candidateName,
   //question: question,
-  //correctAnswer: correctAnswer,
+  correctAnswer: correctAnswer,
   //candidateAnswer: candidateAnswer,
   questions: questions,
   correctAnswers: correctAnswers,
