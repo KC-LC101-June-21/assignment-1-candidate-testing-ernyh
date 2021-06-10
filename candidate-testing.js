@@ -41,7 +41,7 @@ console.log(`${i+1}) ${questions[i]}
 Your Answer: ${candidateAnswers[i]}
 Correct Answer: ${correctAnswers[i]}
 `);
-if(candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()){
+if(String(candidateAnswers[i]).toLowerCase() === String(correctAnswers[i]).toLowerCase()){
   correct++;
 }
 }
