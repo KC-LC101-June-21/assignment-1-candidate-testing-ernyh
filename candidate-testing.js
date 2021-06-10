@@ -1,6 +1,11 @@
 const input = require('readline-sync');
 
 let candidateName = "";
+  let correctAnswer = "Sally Ride";
+  let question =   "Who was the first American woman in space? ";
+  let candidateAnswer = "Sally Ride";
+
+
 let questions = [
   "Who was the first American woman in space? ",
   "True or false: 5 kilometer == 5000 meters? ",
@@ -8,7 +13,6 @@ let questions = [
   "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ", 
   "What is the minimum crew size for the ISS? "
   ];
-  let correctAnswer = "Sally Ride";
 let correctAnswers = [
   "Sally Ride", 
   "true" , 
@@ -72,9 +76,9 @@ function runProgram() {
 // And don't change these or your program will not run as expected //
 module.exports = {
   candidateName: candidateName,
-  //question: question,
+  question: question,
   correctAnswer: correctAnswer,
-  //candidateAnswer: candidateAnswer,
+  candidateAnswer: candidateAnswer,
   questions: questions,
   correctAnswers: correctAnswers,
   candidateAnswers: candidateAnswers,
