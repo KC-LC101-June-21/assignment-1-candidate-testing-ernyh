@@ -15,13 +15,7 @@ let correctAnswers = [
   "Trajectory", 
   "3" 
   ];
-let candidateAnswers = [
-  "",
-  "",
-  "",
-  "",
-  ""
-  ];
+let candidateAnswers = [];
 
 function askForName() {
 candidateName = input.question("Enter candidate name: ");
@@ -30,12 +24,11 @@ console.log();
 
 function askQuestion() {
   let i = 0;
-  for (i = 0; i < 5; i++ ){
+  for (i = 0; i < candidateAnswers.length; i++ ){
   candidateAnswers[i] = input.question(questions[i]);
   console.log();
 }
 }
-
 
 function gradeQuiz(candidateAnswers) {
 let grade = 0;
@@ -43,7 +36,7 @@ let correct = 0;
 let status;
 let i = 0;
 
-for(i= 0; i < 5; i++){
+for(i= 0; i < questions.length; i++){
 console.log(`${i+1}) ${questions[i]}
 Your Answer: ${candidateAnswers[i]}
 Correct Answer: ${correctAnswers[i]}
