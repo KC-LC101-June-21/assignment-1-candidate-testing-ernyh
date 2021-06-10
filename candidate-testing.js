@@ -37,7 +37,7 @@ function askQuestion() {
 }
 
 
-function gradeQuiz() {
+function gradeQuiz(candidateAnswers) {
 let grade = 0;
 let correct = 0;
 let status;
@@ -71,9 +71,7 @@ function runProgram() {
   askForName();
   console.log("Greetings " + candidateName + ".\n" );
   askQuestion();
-
-  //FIXME
-  gradeQuiz();
+  gradeQuiz(this.candidateAnswers);
 }
 
 // Don't write any code below this line //
